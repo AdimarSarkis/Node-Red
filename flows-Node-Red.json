@@ -1,0 +1,21 @@
+[
+    {
+        "id": "1cc11ca086c36b26",
+        "type": "function",
+        "z": "10f57443fe2f820d",
+        "name": "function 712",
+        "func": "let tableData = flow.get(\"savedData\") || [];\n\ntableData.unshift({\n    \"Hora Inicial\": flow.get(\"horaInicial\"),\n    \"Hora Final\": flow.get(\"horaFinal\"),\n    \"Tempo decorrido\": global.get(\"tempo_decorrido\")\n})\n\nmsg.payload = tableData;\n\nflow.set(\"savedData\", tableData)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 1580,
+        "wires": [
+            [
+                "219edb16dfbac475"
+            ]
+        ]
+    }
+]
